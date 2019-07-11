@@ -66,9 +66,11 @@ class Permohonan extends CI_Controller {
 		$pekerjaan = $this->input->post('pekerjaan');        
 		$programStudi = $this->input->post('programStudi');        
 		$fakultas =$this->input->post('fakultas');
+		$jurusan=$this->input->post('jurusanStudi');
 		if($pekerjaan=='siswa'){
 			$pekerjaan=1;
 			$fakultas='-';
+			$jurusan='-';
 		}else{
 			$pekerjaan=0;
 		}
@@ -84,6 +86,7 @@ class Permohonan extends CI_Controller {
 				'fullname'=>$nama[$index],
 				'studyProgram'=>$programStudi,
 				'department'=>$fakultas,
+				'faculty' =>$jurusan,
 				'institute'=>$sekolah,
 				'gender'=>$jenisKelamin[$index],
 				'status'=>'Menunggu',
@@ -105,6 +108,7 @@ class Permohonan extends CI_Controller {
 			$result = $this->Permohonan_model->insertNewInternship($data); 
 			$this->session->set_flashdata('alert','<div class="alert alert-success" role="alert">Pendaftaran berhasil</div>');
 			redirect('Permohonan');
+		
 		}
 		
 		

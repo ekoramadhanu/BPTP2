@@ -93,7 +93,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <br>
             <br>
             </div>
-                <div class="col-sm-3 col-lg-3 col-xl-3">
+                <div class="col-sm-6 col-lg-6 col-xl-3">
                     <div class="single_service_part shadow-sm p-3 mb-5 bg-white rounded">
                     <img class="mb-5" src="<?= base_url('Assets/image/iconguide/Isi form.png')?>" alt="" height="100px" style="display:block; margin:auto;">
                         <h4 align="center">Isi Formulir </h4>
@@ -102,7 +102,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                        
                     </div>
                 </div>
-                <div class="col-sm-3 col-lg-3 col-xl-3">
+                <div class="col-sm-6 col-lg-6 col-xl-3">
                     <div class="single_service_part shadow-sm p-3 mb-5 bg-white rounded">
                     <img class="mb-5" src="<?= base_url('Assets/image/iconguide/Cek status new.png')?>" alt="" height="100px" style="display:block; margin:auto;">
                         <h4 align="center">Cek status</h4>
@@ -110,7 +110,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         diterima/tidak diterima.</p>
                     </div>
                 </div>
-                <div class="col-sm-3 col-lg-3 col-xl-3">
+                <div class="col-sm-6 col-lg-6 col-xl-3">
 					<div class="single_service_part shadow-sm p-3 mb-5 bg-white rounded ">
 						<img class="mb-5" src="<?= base_url('Assets/image/iconguide/Dokumen new.png')?>" alt="" height="100px" style="display:block; margin:auto;">
 						<h4 align="center">Siapkan  Dokumen</h4>
@@ -119,7 +119,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                      
                     </div>
                 </div>
-                <div class="col-sm-3 col-lg-3 col-xl-3">
+                <div class="col-sm-6 col-lg-6 col-xl-3">
 					<div class="single_service_part shadow-sm p-3 mb-5 bg-white rounded ">
 						<img class="mb-5" src="<?= base_url('Assets/image/iconguide/Kirim surat.png')?>" alt="" height="100px" style="display:block; margin:auto;">
 						<h4 align="center">Kirim  Dokumen</h4>

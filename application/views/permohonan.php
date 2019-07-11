@@ -25,7 +25,7 @@
         <div class="container">
             <div class="row d-flex justify-content-center ">
                 <div class=""></div>
-                <div class="col-sm-12 col-lg-6 col-xl-6">
+                <div class="col-sm-12 col-lg-8 col-xl-8">
               
                 <form id="regForm1" method="post" action="<?=base_url('Permohonan/formPermohonan')?>" class="pl-3 pr-3">
                 <img class="mx-auto d-block" src="<?= base_url('Assets/image/logo.png')?>" alt="logo" height="66px">
@@ -54,17 +54,19 @@
                             <option class="" style="color:black" value="siswa">Siswa</option>
                             <option class="" style="color:black" value="mahasiswa">Mahasiswa</option>            
                         </select>
-                        </div>                                                        
+                        </div>   
+                                                                           
                         <div class="form-group">
                             <label class="text-black" id="labelSekolah">Sekolah</label>
                             <input type="text" class="form-control" name="sekolah" id="inputSekolah" required>
                         </div>
-                        <div class="form-group" id="programStudi">   
+                        <div class="form-group" id="programStudi"> 
+                        </div>
+                        <div class="form-group" id="jurusanStudi"> 
+                        </div>
                         <div class="form-group">
                             <label class="text-black" id="labeljurusan">Jurusan</label>
                             <input type="text" class="form-control" name="programStudi" required>                
-                        </div>
-                                     
                         </div>
                         <div class="form-group">
                             <label class="text-black">Tanggal Mulai</label>
@@ -92,12 +94,12 @@
     </section>
 
     <!-- tambah anggota -->
-    <div class="modal fade" id="tambahAnggota" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="tambahAnggota" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog" role="document">
     <div class="modal-content">
-        <div class="modal-header" style="color:black">
+        <div class="modal-header" id="headerTambah" style="color:black">
         <h5 class="modal-title" id="exampleModalLabel">Isi Form Tambah Anggota</h5>
-        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+        <button class="close" type="button" id="xTambah" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
         </button>
         </div>    
@@ -118,8 +120,8 @@
             </select>
             </div>                                                        
         </div>
-        <div class="modal-footer">
-            <button class="btn btn-danger" type="button" data-dismiss="modal">Batal</button>
+        <div class="modal-footer" id="footerTambah">
+            <button class="btn btn-danger" type="button" data-dismiss="modal" id="batalTambah">Batal</button>
             <button class="btn btn-primary" id="tambah" data-dismiss="modal">tambah</button>
         </div>    
     </div>
@@ -158,11 +160,18 @@
         var namaAnggota = document.getElementById('namaAnggota').value;
         var nomorAnggota = document.getElementById('nomorInduk').value;      
         var jenisKelamin = document.getElementById('jenisKelamin').value;      
-        // console.log("nama "+namaAnggota);
-        // console.log("nomor "+nomorAnggota);  
-        // console.log("jenis "+jenisKelamin);  
-        list(namaAnggota,nomorAnggota,jenisKelamin);
-        index++;      
+        console.log(namaAnggota);
+        console.log(nomorAnggota);
+        console.log(jenisKelamin);
+        if(namaAnggota === '' || nomorAnggota === ''){
+            $('#tambah').attr('data-dismiss','');
+            alert('data tidak bisa ditambahkan harap diisi semua form yang diberikan');
+        }else{
+            $('#tambah').attr('data-dismiss','modal');
+            list(namaAnggota,nomorAnggota,jenisKelamin);
+            $('#namaAnggota').val('');
+            $('#nomorInduk').val('');                
+        }
         });
         // ,nameNomor,valueNomor,nameGender,valueGender
         function list(valueNama,valueNomor,valueJenis){      
@@ -201,13 +210,21 @@
             $('#programStudi').append("<label class='text-black' id='labelProgramStudi' >Fakultas</label>"+
             "<input type='text' class='form-control' name='fakultas' id='inputProgramStudi'required>");
             document.getElementById('labeljurusan').innerHTML = "Program Studi";
+            $('#jurusanStudi').append("<label class='text-black' id='labelJurusanStudi' >Jurusan</label>"+
+            "<input type='text' class='form-control' name='jurusanStudi' id='inputProgramStudi'required>"); 
         }
         });
-
-        $('#cetakRekap').on('click', '.batalRekap', function(e) {
+        $('#footerTambah').on('click','#batalTambah',function(e){
         e.preventDefault();
-        document.getElementById('tahunRekap').value = "";
+            $('#namaAnggota').val('');
+            $('#nomorInduk').val('');     
+        });    
+        $('#headerTambah').on('click','#xTambah',function(e){
+        e.preventDefault();
+            $('#namaAnggota').val('');
+            $('#nomorInduk').val('');     
         });
+
     </script>
 </body>
 </html>
