@@ -26,40 +26,13 @@ class Permohonan extends CI_Controller {
 	}
 	public function index()
 	{
-		$this->load->view('permohonan');
+		$data['title'] = 'Permohonan';
+		$data['page'] = 'Permohonan';
+		$this->load->view('permohonan',$data);
 	}
 
 	public function formPermohonan(){
-		// $this->form_validation->set_rules('fullname','fullname','required|trim',['required' => 'Nama Lengkap Harus Diisi']);
-		// $this->form_validation->set_rules('institute','institusi','required|trim',['required' => 'Sekolah/Universitas Harus Diisi']);
-		// $this->form_validation->set_rules('department','jurusan','required|trim',['required' => 'Jurusan/Program Studi Harus Diisi']);
-		// $this->form_validation->set_rules('nisn','id','required|trim',['required' => 'NIM/NISN Harus Diisi']);
-		// $this->form_validation->set_rules('kelompok','jumlah','required|trim',['required' => 'Jumlah Kelmpok Harus Diisi']);
-		// $this->form_validation->set_rules('gender','gender','required|trim',['required' => 'Anda Belum Memilih Jenis Kelamin']);
-		// if($this->form_validation->run()==false){
-		// 	$this->load->view('permohonan');
-		// } else{
-			// $data=[
-			// 	'id' =>$this->input->post('nomor'), 
-			// 	'fullname' => htmlspecialchars($this->input->post('fullname')),
-			// 	'studyProgram'=>htmlspecialchars($this->input->post('programStudi')),
-			// 	'department '=>htmlspecialchars($this->input->post('programStudi')),
-			// 	'institusi' => htmlspecialchars($this->input->post('institute')), 
-			// 	'jurusan' => htmlspecialchars($this->input->post('fakultas')), 
-			// 	'gender' => $this->input->post('jenisKelamin'), 
-			// 	'status' => 'menunggu',
-			// 	'place'=>htmlspecialchars($this->input->post('penempatanMagang')),
-			// 	'guide'=>htmlspecialchars($this->input->post('pembimbingMagang')),
-			// 	'id_kelompok'=> $this->input->post('nomor'), 
-			// 	'is_sekolah'=>1,
-			// 	'date_start'=>$this->input->post('tanggalMulai'),
-			// 	'date_end' =>$this->input->post('tanggalSelesai')
-			// ];
-		
-			// $this->db->insert('internship',$data); 
-			// $this->session->set_flashdata('alert','<div class="alert alert-success" role="alert">Pendaftaran berhasil</div>');
-			// redirect('Permohonan');
-		// }
+	
 		$nama =$this->input->post('nama');
 		$nomor = $this->input->post('nomor');
 		$jenisKelamin = $this->input->post('jenisKelamin');        
@@ -89,7 +62,7 @@ class Permohonan extends CI_Controller {
 				'faculty' =>$jurusan,
 				'institute'=>$sekolah,
 				'gender'=>$jenisKelamin[$index],
-				'status'=>'Menunggu',
+				'status'=>'menunggu',
 				'place'=>'',
 				'guide'=>'',
 				'id_kelompok'=>$nomor[0],

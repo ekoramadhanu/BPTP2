@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <html>
 <head>
-    
+    <title><?php echo $title ?></title>
 	<link href="<?php echo base_url('Assets/css/bootstrap.min.css')?>" rel="stylesheet"> 
 	<!-- animate CSS -->
 	<link rel="stylesheet" href="<?php echo base_url('Assets/css/animate.css')?>">
@@ -107,15 +107,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <img class="mb-5" src="<?= base_url('Assets/image/iconguide/Cek status new.png')?>" alt="" height="100px" style="display:block; margin:auto;">
                         <h4 align="center">Cek status</h4>
                         <p>Lakukan cek status untuk melihat apakah kamu 
-                        diterima/tidak diterima.</p>
+                        diterima/tidak diterima</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-6 col-xl-3">
 					<div class="single_service_part shadow-sm p-3 mb-5 bg-white rounded ">
 						<img class="mb-5" src="<?= base_url('Assets/image/iconguide/Dokumen new.png')?>" alt="" height="100px" style="display:block; margin:auto;">
 						<h4 align="center">Siapkan  Dokumen</h4>
-                        <p>Jika di terima Siapkan dokumen yang berupa surat pengajuan 
-                        PKL dari fakultas / sekolahmu</p>
+                        <p>Jika diterima, siapkan dokumen yang berupa surat pengajuan 
+                        PKL dari fakultas/sekolahmu</p>
                      
                     </div>
                 </div>

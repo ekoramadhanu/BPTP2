@@ -25,25 +25,17 @@ class CekStatus extends CI_Controller {
 	}
 	public function index()
 	{
-		$this->load->view('cek_status');
+		$data['title'] = 'Cek Status';
+		$data['page'] = 'Cek Status';
+		$this->load->view('cek_status',$data);
 	}
 	public function formCekStatus(){
 		$this->form_validation->set_rules('nim','nim','required|trim',['required' => 'NIM/NISN Harus Diisi']);
-		// if($this->form_validation->run()==false){
-		// 	$this->load->view('cek_status');
-		// } else{
-		// 	$data=[
-		// 	'id' => htmlspecialchars($this->input->get('nim'))];
-		// 	redirect('table_status_page',$data);
-		// }
+		
 		$nim=htmlspecialchars($this->input->get('nim'));
-		// if($nim==null){
-		// 	$this->load->view('cek_status');
-		// 	echo "<script>
-		// 	alert('data tidak ada');
-			
-		// </script>";
-		// }else{
+		
+			$data['title'] = 'Status Anda';
+			$data['page'] = 'Status Anda';
 			$data['cekStatus']=$this->CekStatus_model->getStatus($nim);
 			$this->load->view('table_status_page',$data);
 		// 	

@@ -2,6 +2,7 @@
 
 <html>
 <head>
+<title><?php echo $title ?></title>
     <link href="<?php echo base_url('Assets/css/bootstrap.min.css')?>" rel="stylesheet"> 
     <!-- animate CSS -->
     <link rel="stylesheet" href="<?php echo base_url('Assets/css/animate.css')?>">
@@ -76,17 +77,33 @@
                           <td><?=$cek->fullname?></td>
                           <td><?=$cek->id?></td>
                           <td><?=$cek->institute?></td>
-                          <td><?=$cek->status?></td>
+                          <td><?=ucfirst($cek->status)?></td>
                       </tr>
                     <?php endforeach;?>
                   </tbody>
               </table>
 
-          </table>
+          <?php
+          if ($cek->status=='terdaftar'){
+            echo"
+            <hr>
+            <p>Silahkan kirim dokumen ke BPTP JATIM</p>";
+          }
+          else if($cek->status=='menunggu'){
+            echo"
+            <hr>
+            <p>Silahkan tunggu dalam beberapa hari dan lakukan cek secara berkala</p>";
+          }else{
+            echo"
+            <hr>
+            <p>Terimakasih telah mendaftar dan mohon maaf kuota sudah penuh</p>";
+          }
+          ?>
       </div>
   </div>
 </div>  
 </div>
+
 </section>
 
 <!-- jquery plugins here-->

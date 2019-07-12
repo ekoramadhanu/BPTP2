@@ -1,6 +1,7 @@
 
 <html>
 <head>
+<title><?php echo $title ?></title>
     <link href="<?php echo base_url('Assets/css/bootstrap.min.css')?>" rel="stylesheet"> 
     <!-- animate CSS -->
     <link rel="stylesheet" href="<?php echo base_url('Assets/css/animate.css')?>">
