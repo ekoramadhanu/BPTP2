@@ -205,6 +205,8 @@
             document.getElementById('labeljurusan').innerHTML = "Jurusan";
             $('#labelProgramStudi').remove();
             $('#inputProgramStudi').remove();
+            $('#labelJurusanStudi').remove();
+            $('#inputJurusanStudi').remove();
         }else{      
             document.getElementById('labelSekolah').innerHTML = "Universitas";
 
@@ -212,7 +214,7 @@
             "<input type='text' class='form-control' name='fakultas' id='inputProgramStudi'required>");
             document.getElementById('labeljurusan').innerHTML = "Program Studi";
             $('#jurusanStudi').append("<label class='text-black' id='labelJurusanStudi' >Jurusan</label>"+
-            "<input type='text' class='form-control' name='jurusanStudi' id='inputProgramStudi'required>"); 
+            "<input type='text' class='form-control' name='jurusanStudi' id='inputJurusanStudi'required>"); 
         }
         });
         $('#footerTambah').on('click','#batalTambah',function(e){

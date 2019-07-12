@@ -1,8 +1,6 @@
-
-
 <html>
 <head>
-<title><?php echo $title ?></title>
+    <title><?php echo $title ?></title>
     <link href="<?php echo base_url('Assets/css/bootstrap.min.css')?>" rel="stylesheet"> 
     <!-- animate CSS -->
     <link rel="stylesheet" href="<?php echo base_url('Assets/css/animate.css')?>">
@@ -18,9 +16,9 @@
     <link rel="stylesheet" href="<?php echo base_url('Assets/css/slick.css')?>">
     <!-- style CSS -->
     <link rel="stylesheet" href="<?= base_url('Assets/css/style.css')?>">
-    <link rel="stylesheet" href="<?= base_url('Assets/css/tamplateform.css')?>">
-    
+    <link rel="stylesheet" href="<?= base_url('Assets/css/tamplateform.css')?>">    
 </head>
+
 <body>
  <!--::header part start::-->
  <header class="main_menu home_menu">
@@ -29,81 +27,81 @@
             <div class="col-lg-12 col-xl-12">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <a class="navbar-brand" href="<?= base_url('Home') ?>"> <img src="<?= base_url('Assets/image/logo.png')?>" alt="logo" height="33px"> BPTP JATIM </a>
-                    
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse main-menu-item justify-content-end"
-                id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('permohonan') ?>">Permohonan</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="<?= base_url('CekStatus') ?>">Cek Status</a>
-                    </li>
-                </ul>
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                     </button>
+                    <div class="collapse navbar-collapse main-menu-item justify-content-end"
+                    id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?= base_url('permohonan') ?>">Permohonan</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="<?= base_url('CekStatus') ?>">Cek Status</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
             </div>
-        </nav>
+        </div>
     </div>
-</div>
-</div>
 </header>
 <!-- Header part end-->
 
-    
-    <section class="review_part padding_top">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-12">
-                    <div class="section_tittle text-center mt-5"> 
-                        <h4>Status Magang</h4>
-                        <table class="table">
-                          <thead class="thead-dark">
+<section class="review_part padding_top">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-12">
+                <div class="section_tittle text-center mt-5"> 
+                    <h4>Status Magang</h4>
+                    <table class="table">
+                        <thead class="thead-dark text-center">
                             <tr>
-                              <th scope="col">Nama</th>
-                              <th scope="col">NIM/NIS</th>
-                              <th scope="col">Sekolah/Universitas</th>
-                              <th scope="col">Status</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                        <?php foreach($cekStatus as $cek):?>
-                        <tr>
-                          <td><?=$cek->fullname?></td>
-                          <td><?=$cek->id?></td>
-                          <td><?=$cek->institute?></td>
-                          <td><?=ucfirst($cek->status)?></td>
-                      </tr>
-                    <?php endforeach;?>
-                  </tbody>
-              </table>
-
-          <?php
-          if ($cek->status=='terdaftar'){
-            echo"
-            <hr>
-            <p>Silahkan kirim dokumen ke BPTP JATIM</p>";
-          }
-          else if($cek->status=='menunggu'){
-            echo"
-            <hr>
-            <p>Silahkan tunggu dalam beberapa hari dan lakukan cek secara berkala</p>";
-          }else{
-            echo"
-            <hr>
-            <p>Terimakasih telah mendaftar dan mohon maaf kuota sudah penuh</p>";
-          }
-          ?>
-      </div>
-  </div>
-</div>  
-</div>
-
+                                <th scope="col">Nama</th>
+                                <th scope="col">NIM/NIS</th>
+                                <th scope="col">Sekolah/Universitas</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <?php if($cekStatus):?>
+                            <?php foreach($cekStatus as $cek):?>
+                                <tr>
+                                    <td><?=$cek->fullname?></td>
+                                    <td><?=$cek->id?></td>
+                                    <td><?=$cek->institute?></td>
+                                    <td><?=ucfirst($cek->status)?></td>
+                                </tr>
+                            <?php endforeach;?>
+                        </tbody>
+                    </table>         
+                    <?php          
+                    if ($cek->status=='terdaftar' ){
+                        echo"
+                        <hr>
+                        <p>Silahkan kirim dokumen ke BPTP JATIM</p>";
+                    }
+                    else if($cek->status=='menunggu'){
+                        echo"
+                        <hr>
+                        <p>Silahkan tunggu dalam beberapa hari dan lakukan cek secara berkala</p>";
+                    }else{
+                        echo"
+                        <hr>
+                        <p>Terimakasih telah mendaftar dan mohon maaf kuota sudah penuh</p>";
+                    }
+                    ?>
+                    <?php else:?>
+                    <tr class='text-center'>
+                        <td colspan='4'> data tidak ditemukan</td>
+                    </tr>
+                    <?php endif?>
+                </div>
+            </div>
+        </div>  
+    </div>
 </section>
 
 <!-- jquery plugins here-->

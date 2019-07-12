@@ -32,7 +32,7 @@ class CekStatus extends CI_Controller {
 	public function formCekStatus(){
 		$this->form_validation->set_rules('nim','nim','required|trim',['required' => 'NIM/NISN Harus Diisi']);
 		
-		$nim=htmlspecialchars($this->input->get('nim'));
+		$nim=$this->input->get('nim');
 		
 			$data['title'] = 'Status Anda';
 			$data['page'] = 'Status Anda';
