@@ -65,10 +65,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<h2>Balai Pengkajian Teknologi Pertanian <br> Jawa Timur</h2>
 							<br>
 							<h3>Program Magang</h3>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores architecto quod, ea laboriosam exercitationem aspernatur debitis obcaecati incidunt ad recusandae eveniet qui sed culpa!
-								 Cupiditate voluptatum unde vitae enim! Temporibus!</p>
-								 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores architecto quod, ea laboriosam exercitationem aspernatur debitis obcaecati incidunt ad recusandae eveniet qui sed culpa!
-								 Cupiditate voluptatum unde vitae enim! Temporibus!</p>
+                            <p>BPTP Jatim menerima magang untuk tujuan akademis yang berupa Praktek Kerja Lapangan (PKL), 
+                            Kerja Perktek atau sejenisnya. Peserta magang dapat berasal dari mana saja dan dilakukan kapan saja. 
+                            Selain itu, magang bisa terdiri dari kelompok atau individu. Setiap peserta/kelompok magang akan diberikan 
+                            pembimbing dengan tujuan mengawasi dan memberikan ilmu-ilmu baru selama magang berlangsung.</p>
+					        <p>Semua peserta magang wajib mengikuti peraturan yang telah ditetapkan
+                            seperti, waktu magang menyesuaikan jam kantor. Selain itu, 
+                            tugas yang diberikan pembimbing harap dikerjakan dengan baik 
+                            dan tanggung jawab. Bagi yang ingin mendaftar magang di 
+                            BPTP Jatim, dibawah ini terdapat langkah-langkah dan persyaratan yang harus dipenuhi</p>
 								 
                         </div>
                     </div>
@@ -96,7 +101,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="col-sm-6 col-lg-6 col-xl-3">
                     <div class="single_service_part shadow-sm p-3 mb-5 bg-white rounded">
                     <img class="mb-5" src="<?= base_url('Assets/image/iconguide/Isi form.png')?>" alt="" height="100px" style="display:block; margin:auto;">
-                        <h4 align="center">Isi Formulir </h4>
+                        <h4 class="text-center">Isi Formulir </h4>
                         <p>Isi form pendaftaran magang dengan memilih 
                         menu permohonan pada website ini</p>
                        
@@ -105,7 +110,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="col-sm-6 col-lg-6 col-xl-3">
                     <div class="single_service_part shadow-sm p-3 mb-5 bg-white rounded">
                     <img class="mb-5" src="<?= base_url('Assets/image/iconguide/Cek status new.png')?>" alt="" height="100px" style="display:block; margin:auto;">
-                        <h4 align="center">Cek status</h4>
+                        <h4 class="text-center">Cek status</h4>
                         <p>Lakukan cek status untuk melihat apakah kamu 
                         diterima/tidak diterima</p>
                     </div>
@@ -113,7 +118,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="col-sm-6 col-lg-6 col-xl-3">
 					<div class="single_service_part shadow-sm p-3 mb-5 bg-white rounded ">
 						<img class="mb-5" src="<?= base_url('Assets/image/iconguide/Dokumen new.png')?>" alt="" height="100px" style="display:block; margin:auto;">
-						<h4 align="center">Siapkan  Dokumen</h4>
+						<h4 class="text-center">Siapkan  Dokumen</h4>
                         <p>Jika diterima, siapkan dokumen yang berupa surat pengajuan 
                         PKL dari fakultas/sekolahmu</p>
                      
@@ -122,7 +127,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="col-sm-6 col-lg-6 col-xl-3">
 					<div class="single_service_part shadow-sm p-3 mb-5 bg-white rounded ">
 						<img class="mb-5" src="<?= base_url('Assets/image/iconguide/Kirim surat.png')?>" alt="" height="100px" style="display:block; margin:auto;">
-						<h4 align="center">Kirim  Dokumen</h4>
+						<h4 class="text-center">Kirim  Dokumen</h4>
                         <p>Setelah itu, kirim dokumen yang telah kamu siapkan 
                         sebelumnya ke kantor BPTP Jatim </p>
                      
@@ -161,14 +166,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="single_service_part shadow-sm p-3 mb-5 bg-white rounded ">
 						<img class="mb-5" src="<?= base_url('Assets/image/iconguide/mahasiswa.png')?>" alt="" height="100px" style="display:block; margin:auto;">
 						<h4 class="text-center">Mahasiswa</h4>
-                        <p>Lorem ipsum dolor sit amet elit asdew as consectetur adipisicing asd. </p>
+                        <p class="text-center">Mahasiswa dengan jurusan SI, TI, Manajemen SDM, Statistika,
+                        Biologi, Kimia, Pertanian, dan Akutansi</p>
                     </div>
                  </div>
                  <div class="col-sm-6 col-lg-6 col-xl-6">
 					<div class="single_service_part shadow-sm p-3 mb-5 bg-white rounded ">
 						<img class="mb-5" src="<?= base_url('Assets/image/iconguide/siswa.png')?>" alt="" height="100px" style="display:block; margin:auto;">
 						<h4 class="text-center">siswa</h4>
-                        <p>Lorem ipsum dolor sit amet elit asdew as consectetur adipisicing asd. </p>
+                        <p class="text-center">Siswa dengan jurusan Agribisnis, TKJ, Multikultural, Pengelolaan hasil pertanian</p>
                     </div>
                  </div>
             </div>  
