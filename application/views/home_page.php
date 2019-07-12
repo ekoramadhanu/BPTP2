@@ -69,11 +69,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             Kerja Perktek atau sejenisnya. Peserta magang dapat berasal dari mana saja dan dilakukan kapan saja. 
                             Selain itu, magang bisa terdiri dari kelompok atau individu. Setiap peserta/kelompok magang akan diberikan 
                             pembimbing dengan tujuan mengawasi dan memberikan ilmu-ilmu baru selama magang berlangsung.</p>
+                            <br>
 					        <p>Semua peserta magang wajib mengikuti peraturan yang telah ditetapkan
                             seperti, waktu magang menyesuaikan jam kantor. Selain itu, 
                             tugas yang diberikan pembimbing harap dikerjakan dengan baik 
                             dan tanggung jawab. Bagi yang ingin mendaftar magang di 
-                            BPTP Jatim, dibawah ini terdapat langkah-langkah dan persyaratan yang harus dipenuhi</p>
+                            BPTP Jatim, dibawah ini terdapat langkah-langkah dan persyaratan yang harus dipenuhi.</p>
 								 
                         </div>
                     </div>

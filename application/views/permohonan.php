@@ -45,7 +45,7 @@
                         <div class="form-group">          
                         <label class="text-black">Jenis Kelamin</label>
                         <select class="form-control" name="jenisKelamin[]" style="color:black">            
-                            <option class="" style="color:black" value="L">Laki - Laki</option>
+                            <option class="" style="color:black" value="L">Laki-Laki</option>
                             <option class="" style="color:black" value="P">Perempuan</option>            
                         </select>
                         </div>                                                        
@@ -78,12 +78,12 @@
                             <input type="date" class="form-control text-black" name="tanggalSelesai" required>
                         </div>
                         <div class="form-group">
-                        <label id="daftarMagang" class="text-black">Daftar angota</label>                
+                        <label id="daftarMagang" class="text-black">Daftar Anggota</label>                
                         <div id="listAnggota" class="ml-3 mr-3"></div>
                         <a class="small text-primary" href="" data-toggle="modal" data-target="#tambahAnggota" >Tambah Anggota</a>
                         </div>
                         <button class="genric-btn info-border circle mt-3">Kirim</button>
-                        <a class="genric-btn default-border circle" href="<?= base_url('Home')?>" >kembali ke halaman utama</a>
+                        <a class="genric-btn default-border circle" href="<?= base_url('Home')?>" >Kembali ke Halaman Utama</a>
                     </form>
                     
                 </div>
@@ -99,14 +99,14 @@
     <div class="modal-dialog" role="document">
     <div class="modal-content">
         <div class="modal-header" id="headerTambah" style="color:black">
-        <h5 class="modal-title" id="exampleModalLabel">Isi Form Tambah Anggota</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Isi Formulir Tambah Anggota</h5>
         <button class="close" type="button" id="xTambah" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
         </button>
         </div>    
         <div class="modal-body">
             <div class="form-group">
-            <input type="text" class="form-control form-control-user" placeholder="Nama anggota"  id="namaAnggota"
+            <input type="text" class="form-control form-control-user" placeholder="Nama Anggota"  id="namaAnggota"
             name="namaAggota" required style="color:black" required>
             </div>
             <div class="form-group">
@@ -114,16 +114,16 @@
             name="nomorInduk" min='0'required style="color:black" required>
             </div>        
             <div class="form-group">          
-            <label class="text-black">jenis kelamin</label>
+            <label class="text-black text-capitalize">jenis kelamin</label>
             <select class="form-control" name="jenisKelamin" style="color:black" id="jenisKelamin">            
-                <option class="" style="color:black" value="L">Laki - Laki</option>
+                <option class="" style="color:black" value="L">Laki-Laki</option>
                 <option class="" style="color:black" value="P">Perempuan</option>            
             </select>
             </div>                                                        
         </div>
         <div class="modal-footer" id="footerTambah">
             <button class="btn btn-danger" type="button" data-dismiss="modal" id="batalTambah">Batal</button>
-            <button class="btn btn-primary" id="tambah" data-dismiss="modal">tambah</button>
+            <button class="btn btn-primary" id="tambah" data-dismiss="modal">Tambah</button>
         </div>    
     </div>
     </div>
@@ -166,7 +166,7 @@
         console.log(jenisKelamin);
         if(namaAnggota === '' || nomorAnggota === ''){
             $('#tambah').attr('data-dismiss','');
-            alert('data tidak bisa ditambahkan harap diisi semua form yang diberikan');
+            alert('Data Tidak Bisa Ditambahkan Harap Diisi Semua Formulir yang Diberikan');
         }else{
             $('#tambah').attr('data-dismiss','modal');
             list(namaAnggota,nomorAnggota,jenisKelamin);

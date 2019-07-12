@@ -33,22 +33,15 @@
                         <h1 class="mt-4">Silakan Masukkan Data</h1>
                         <br>
                         <div class="form-group">
-                        <input type="text" name="nim" class="form-control" placeholder="NIM/NISN *" value="" required />
+                        <input type="text" name="nim" class="form-control" placeholder="NIM/NISN*" value="" required />
                         </div>
                         <?= form_error('nim','<small class="text-danger pl-3">','</small>');?>
-                        <Button type="submit" name="submit" class="genric-btn info-border circle mt-3">Submit</Button>
-                        
-                        <a class="genric-btn default-border circle" href="<?= base_url('Home')?>" >kembali ke halaman utama</a>
-                                    
-                        
+                        <Button type="submit" name="submit" class="genric-btn info-border circle mt-3">Cari</Button>                        
+                        <a class="genric-btn default-border circle text-capitalize" href="<?= base_url('Home')?>" >kembali ke halaman utama</a>
                     </form> 
-                    
                 </div>
             </div>
-            
-            
         </div>
-
     </section>
    
     

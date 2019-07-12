@@ -75,11 +75,11 @@ class Permohonan extends CI_Controller {
 		}
 		$this->form_validation->set_rules('nomor[]','nomor[]','is_unique[internship.id]');
 		if(!$this->form_validation->run()){
-			$this->session->set_flashdata('massage','<div class="alert alert-danger" role="alert">NIM/NISN sudah pernah terdaftar</div>');
+			$this->session->set_flashdata('massage','<div class="alert alert-danger text-capitalize" role="alert">NIM/NISN sudah pernah terdaftar</div>');
 			redirect('Permohonan');
 		}else{
 			$result = $this->Permohonan_model->insertNewInternship($data); 
-			$this->session->set_flashdata('alert','<div class="alert alert-success" role="alert">Pendaftaran berhasil</div>');
+			$this->session->set_flashdata('alert','<div class="alert alert-success text-capitalize" role="alert">Pendaftaran berhasil</div>');
 			redirect('Permohonan');
 		
 		}

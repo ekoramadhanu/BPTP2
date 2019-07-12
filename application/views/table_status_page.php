@@ -95,7 +95,7 @@
                     ?>
                     <?php else:?>
                     <tr class='text-center'>
-                        <td colspan='4'> data tidak ditemukan</td>
+                        <td colspan='4' class="text-capitalize"> data tidak ditemukan</td>
                     </tr>
                     <?php endif?>
                 </div>
