@@ -66,7 +66,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<br>
 							<h3>Program Magang</h3>
                             <p>BPTP Jatim menerima magang untuk tujuan akademis yang berupa Praktek Kerja Lapangan (PKL), 
-                            Kerja Perktek atau sejenisnya. Peserta magang dapat berasal dari mana saja dan dilakukan kapan saja. 
+                            Kerja Praktek atau sejenisnya. Peserta magang dapat berasal dari mana saja dan dilakukan kapan saja. 
                             Selain itu, magang bisa terdiri dari kelompok atau individu. Setiap peserta/kelompok magang akan diberikan 
                             pembimbing dengan tujuan mengawasi dan memberikan ilmu-ilmu baru selama magang berlangsung.</p>
                             <br>
@@ -121,7 +121,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<img class="mb-5" src="<?= base_url('Assets/image/iconguide/Dokumen new.png')?>" alt="" height="100px" style="display:block; margin:auto;">
 						<h4 class="text-center">Siapkan  Dokumen</h4>
                         <p>Jika diterima, siapkan dokumen yang berupa surat pengajuan 
-                        PKL dari fakultas/sekolahmu</p>
+                        magang dari fakultas/sekolahmu</p>
                      
                     </div>
                 </div>
@@ -175,7 +175,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="single_service_part shadow-sm p-3 mb-5 bg-white rounded ">
 						<img class="mb-5" src="<?= base_url('Assets/image/iconguide/siswa.png')?>" alt="" height="100px" style="display:block; margin:auto;">
 						<h4 class="text-center">siswa</h4>
-                        <p class="text-center">Siswa dengan jurusan Agribisnis, TKJ, Holtikultural, Pengelolaan hasil pertanian</p>
+                        <p class="text-center">Siswa dengan jurusan Agribisnis, TKJ, Hortikultural, Pengelolaan hasil pertanian</p>
                     </div>
                  </div>
             </div>  
