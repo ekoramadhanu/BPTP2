@@ -175,7 +175,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="single_service_part shadow-sm p-3 mb-5 bg-white rounded ">
 						<img class="mb-5" src="<?= base_url('Assets/image/iconguide/siswa.png')?>" alt="" height="100px" style="display:block; margin:auto;">
 						<h4 class="text-center">siswa</h4>
-                        <p class="text-center">Siswa dengan jurusan Agribisnis, TKJ, Multikultural, Pengelolaan hasil pertanian</p>
+                        <p class="text-center">Siswa dengan jurusan Agribisnis, TKJ, Holtikultural, Pengelolaan hasil pertanian</p>
                     </div>
                  </div>
             </div>  
