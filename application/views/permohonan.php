@@ -80,7 +80,7 @@
                         <div class="form-group">
                         <label id="daftarMagang" class="text-black">Daftar Anggota</label>                
                         <div id="listAnggota" class="ml-3 mr-3"></div>
-                        <a class="small text-primary" href="" data-toggle="modal" data-target="#tambahAnggota" >Tambah Anggota</a>
+                        <a class=" text-primary" href="" data-toggle="modal" data-target="#tambahAnggota" >Tambah Anggota</a>
                         </div>
                         <button class="genric-btn info-border circle mt-3">Kirim</button>
                         <a class="genric-btn default-border circle" href="<?= base_url('Home')?>" >Kembali ke Halaman Utama</a>
