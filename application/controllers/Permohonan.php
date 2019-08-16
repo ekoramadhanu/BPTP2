@@ -48,8 +48,105 @@ class Permohonan extends CI_Controller {
 			$pekerjaan=0;
 		}
 		$sekolah = $this->input->post('sekolah');
-		$tanggalMulai =$this->input->post('tanggalMulai');
-		$tanggalBerakhir =$this->input->post('tanggalSelesai');    
+		// $tanggalMulai =$this->input->post('tanggalMulai');
+		// $tanggalBerakhir =$this->input->post('tanggalSelesai');    
+		$dayStart = $this->input->post('dayStart') ;
+        $monthStart= $this->input->post('monthStart');
+        $yearStart = $this->input->post('yearStart');
+        $dayEnd = $this->input->post('dayEnd');
+        $monthEnd = $this->input->post('monthEnd');
+        $yearEnd = $this->input->post('yearEnd');        
+        switch($monthStart){
+            case 'Januari':
+                $monthStart=1;
+                break;
+            case 'Februari':
+                $monthStart=2;
+                break;
+            case 'Maret':
+                $monthStart=3;
+                break;
+            case 'April':
+                $monthStart=4;
+                break;
+            case 'Mei':
+                $monthStart=5;
+                break;
+            case 'Juni':
+                $monthStart=6;
+                break;
+            case 'Juli':
+                $monthStart=7;
+                break;
+            case 'Agustus':
+                $monthStart=8;
+                break;
+            case 'September':
+                $monthStart=9;
+                break;
+            case 'Oktober':
+                $monthStart=10;
+                break;
+            case 'November':
+                $monthStart=11;
+                break;
+            case 'Desember':
+                $monthStart=12;
+                break;
+        }
+        switch($monthEnd){
+            case 'Januari':
+                $monthEnd=1;
+                break;
+            case 'Februari':
+                $monthEnd=2;
+                break;
+            case 'Maret':
+                $monthEnd=3;
+                break;
+            case 'April':
+                $monthEnd=4;
+                break;
+            case 'Mei':
+                $monthEnd=5;
+                break;
+            case 'Juni':
+                $monthEnd=6;
+                break;
+            case 'Juli':
+                $monthEnd=7;
+                break;
+            case 'Agustus':
+                $monthEnd=8;
+                break;
+            case 'September':
+                $monthEnd=9;
+                break;
+            case 'Oktober':
+                $monthEnd=10;
+                break;
+            case 'November':
+                $monthEnd=11;
+                break;
+            case 'Desember':
+                $monthEnd=12;
+                break;
+        }
+        if($yearStart > $yearEnd){
+            $this->session->set_flashdata('massage','<div class="alert alert-danger text-capitalize" role="alert">tahun mulai magang tidak boleh lebih besar</div>');
+            redirect('Permohonan');
+            return;
+        }else if($yearStart = $yearEnd){
+            if($monthStart > $monthEnd){
+                $this->session->set_flashdata('massage','<div class="alert alert-danger text-capitalize" role="alert">bulan mulai magang tidak boleh lebih besar</div>');
+                redirect('Permohonan');
+                return;
+            }else if($dayStart > $dayEnd && $monthStart == $monthEnd){
+				$this->session->set_flashdata('massage','<div class="alert alert-danger text-capitalize" role="alert">hari mulai magang tidak boleh lebih besar</div>');
+                redirect('Permohonan');
+                return;
+			}
+        }
 		$data = array();
 		$index = 0;           
 		
@@ -67,8 +164,13 @@ class Permohonan extends CI_Controller {
 				'guide'=>'',
 				'id_kelompok'=>$nomor[0],
 				'is_sekolah'=>$pekerjaan,
-				'date_start'=>$tanggalMulai,
-				'date_end'=>$tanggalBerakhir
+				'dayStar'=>$dayStart,
+                'monthStart'=>$monthStart,
+                'yearStart'=>$yearStart,
+                'dayEnd'=>$dayEnd,
+                'monthEnd'=>$monthEnd,
+                'yearEnd'=>$yearEnd,
+                'isCetak'=>0
 				)
 			);
 			$index++;

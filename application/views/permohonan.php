@@ -71,16 +71,84 @@
                         </div>
                         <div class="form-group">
                             <label class="text-black">Tanggal Mulai</label>
-                            <input type="date" class="form-control text-black" name="tanggalMulai" required>
+                            <!-- <input type="date" class="form-control text-black" name="tanggalMulai" required> -->
+                            <div class="form-row">
+                                <div class="col">
+                                    <input type="number" class="form-control" placeholder="Hari" min="0" max="31" required name="dayStart">
+                                    <div class="invalid-feedback">
+                                    <p class="pl-2 text-capitalize">hari tidak boleh kosong</p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                <select class="form-control custom-select" style="color:black" required name="monthStart">
+                                    <option disabled selected class="" style="color:black" value="">Bulan</option>
+                                    <option class="" style="color:black">Januari</option>
+                                    <option class="" style="color:black">Februari</option>            
+                                    <option class="" style="color:black">Maret</option>
+                                    <option class="" style="color:black">April</option>            
+                                    <option class="" style="color:black">Mei</option>            
+                                    <option class="" style="color:black">Juni</option>
+                                    <option class="" style="color:black">Juli</option>            
+                                    <option class="" style="color:black">Agustus</option>
+                                    <option class="" style="color:black">September</option>            
+                                    <option class="" style="color:black">Oktober</option>            
+                                    <option class="" style="color:black">November</option>            
+                                    <option class="" style="color:black">Desember</option>            
+                                </select>
+                                <div class="invalid-feedback">
+                                    <p class="pl-2 text-capitalize">bulan tidak boleh kosong</p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <input type="number" class="form-control" placeholder="Tahun" min="2000" required name="yearStart"> 
+                                    <div class="invalid-feedback">
+                                    <p class="pl-2 text-capitalize">tahun tidak boleh kosong</p>
+                                    </div>
+                                </div>
+                                </div>
                         </div>
                         <div class="form-group">
                             <label class="text-black">Tanggal Selesai</label>
-                            <input type="date" class="form-control text-black" name="tanggalSelesai" required>
+                            <!-- <input type="date" class="form-control text-black" name="tanggalSelesai" required> -->
+                            <div class="form-row">
+                                <div class="col">
+                                    <input type="number" class="form-control" placeholder="Hari" min="0" max="31" required name="dayEnd">
+                                    <div class="invalid-feedback">
+                                    <p class="pl-2 text-capitalize">hari tidak boleh kosong</p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                <select class="form-control custom-select" style="color:black" required name="monthEnd">
+                                    <option disabled selected class="" style="color:black" value="">Bulan</option>
+                                    <option class="" style="color:black">Januari</option>
+                                    <option class="" style="color:black">Februari</option>            
+                                    <option class="" style="color:black">Maret</option>
+                                    <option class="" style="color:black">April</option>            
+                                    <option class="" style="color:black">Mei</option>            
+                                    <option class="" style="color:black">Juni</option>
+                                    <option class="" style="color:black">Juli</option>            
+                                    <option class="" style="color:black">Agustus</option>
+                                    <option class="" style="color:black">September</option>            
+                                    <option class="" style="color:black">Oktober</option>            
+                                    <option class="" style="color:black">November</option>            
+                                    <option class="" style="color:black">Desember</option>            
+                                </select>
+                                <div class="invalid-feedback">
+                                    <p class="pl-2 text-capitalize">bulan tidak boleh kosong</p>
+                                </div>
+                                </div>
+                                <div class="col">
+                                    <input type="number" class="form-control" placeholder="Tahun" min="2000" required name="yearEnd">
+                                    <div class="invalid-feedback">
+                                    <p class="pl-2 text-capitalize">tahun tidak boleh kosong</p>
+                                    </div>
+                                </div>
+                                </div>
                         </div>
                         <div class="form-group">
                         <label id="daftarMagang" class="text-black">Daftar Anggota</label>                
                         <div id="listAnggota" class="ml-3 mr-3"></div>
-                        <a class=" text-primary" href="" data-toggle="modal" data-target="#tambahAnggota" >Tambah Anggota</a>
+                        <a class=" text-primary" href="" data-toggle="modal" data-target="#tambahAnggota" id="linkTambahAnggota">Tambah Anggota</a>
                         </div>
                         <button class="genric-btn info-border circle mt-3">Kirim</button>
                         <a class="genric-btn default-border circle" href="<?= base_url('Home')?>" >Kembali ke Halaman Utama</a>
@@ -107,24 +175,25 @@
         <div class="modal-body">
             <div class="form-group">
             <input type="text" class="form-control form-control-user" placeholder="Nama Anggota"  id="namaAnggota"
-            name="namaAggota" required style="color:black" required>
+            name="namaAggota" required style="color:black" required onblur="validate()">
             </div>
             <div class="form-group">
             <input type="text" class="form-control form-control-user" placeholder="NIM/NISN" id="nomorInduk"
-            name="nomorInduk" min='0'required style="color:black" required>
+            name="nomorInduk" min='0'required style="color:black" required onblur="validate()">
             </div>        
             <div class="form-group">          
-            <label class="text-black text-capitalize">jenis kelamin</label>
+            <!-- <label class="text-black text-capitalize">jenis kelamin</label> -->
             <select class="form-control" name="jenisKelamin" style="color:black" id="jenisKelamin">            
+                <option disabled selected class="" style="color:black" value="1">Pilih Jenis Kelamin</option>
                 <option class="" style="color:black" value="L">Laki-Laki</option>
                 <option class="" style="color:black" value="P">Perempuan</option>            
-            </select>
+          </select>
             </div>                                                        
         </div>
-        <div class="modal-footer" id="footerTambah">
-            <button class="btn btn-danger" type="button" data-dismiss="modal" id="batalTambah">Batal</button>
-            <button class="btn btn-primary" id="tambah" data-dismiss="modal">Tambah</button>
-        </div>    
+        <div class="modal-footer" id="footerTambahAnggota">
+            <button class="btn btn-danger" type="button" data-dismiss="modal" id="batalTambahAnggota">Batal</button>
+            <button class="btn btn-primary" id="tambah" data-dismiss="modal" disabled>Tambah</button>
+        </div>  
     </div>
     </div>
     </div>
@@ -172,6 +241,7 @@
             list(namaAnggota,nomorAnggota,jenisKelamin);
             $('#namaAnggota').val('');
             $('#nomorInduk').val('');                
+            $('#jenisKelamin').val('1');                
         }
         });
         // ,nameNomor,valueNomor,nameGender,valueGender
@@ -217,16 +287,53 @@
             "<input type='text' class='form-control' name='jurusanStudi' id='inputJurusanStudi'required>"); 
         }
         });
+
         $('#footerTambah').on('click','#batalTambah',function(e){
         e.preventDefault();
             $('#namaAnggota').val('');
-            $('#nomorInduk').val('');     
+            $('#nomorInduk').val('');
+            $('#jenisKelamin').val(1);      
         });    
+
         $('#headerTambah').on('click','#xTambah',function(e){
         e.preventDefault();
             $('#namaAnggota').val('');
-            $('#nomorInduk').val('');     
+            $('#nomorInduk').val('');  
+            $('#jenisKelamin').val(1);    
         });
+
+        $('#linkTambahAnggota').click(function(){
+            console.log('klik');
+            $('#tambah').attr('disabled','disabled');  
+        });
+
+        function checkNomor(){
+            var name= $('#nomorInduk').val();
+            console.log(name);
+            if(name === ''){
+                return false;
+            }else{
+                return true;
+            }
+            }
+
+            function checkNama(){
+            var name= $('#namaAnggota').val();
+            console.log(name);
+            if(name === ''){
+                return false;
+            }else{
+                return true;
+            }
+            }
+
+            function validate(){
+            var valid = checkNama();
+            valid = valid && checkNomor();
+            if(valid) {
+                $('#tambah').removeAttr('disabled');         
+                }      
+            }
 
     </script>
 </body>
