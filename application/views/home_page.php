@@ -3,6 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <html>
 <head>
+    <link rel="shortcut icon" href="<?=base_url('Assets/')?>image/logo.ico" type="image/x-icon">
+    <link rel="icon" href="<?=base_url('Assets/')?>image/logo.ico" type="image/x-icon">  
     <title><?php echo $title ?></title>
 	<link href="<?php echo base_url('Assets/css/bootstrap.min.css')?>" rel="stylesheet"> 
 	<!-- animate CSS -->

@@ -1,7 +1,9 @@
 
 <html>
 <head>
-<title><?php echo $title ?></title>
+    <link rel="shortcut icon" href="<?=base_url('Assets/')?>image/logo.ico" type="image/x-icon">
+    <link rel="icon" href="<?=base_url('Assets/')?>image/logo.ico" type="image/x-icon">  
+    <title><?php echo $title ?></title>
     <link href="<?php echo base_url('Assets/css/bootstrap.min.css')?>" rel="stylesheet"> 
     <!-- animate CSS -->
     <link rel="stylesheet" href="<?php echo base_url('Assets/css/animate.css')?>">
@@ -18,7 +20,7 @@
     <!-- style CSS -->
     <link rel="stylesheet" href="<?= base_url('Assets/css/style.css')?>">
     <link rel="stylesheet" href="<?= base_url('Assets/css/tamplateform.css')?>">
-    
+        
 </head>
 <body>
 
