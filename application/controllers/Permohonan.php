@@ -132,7 +132,19 @@ class Permohonan extends CI_Controller {
                 $monthEnd=12;
                 break;
         }
-        if($yearStart > $yearEnd){
+        $check;
+        for ($i=0; $i < count($nomor)-1; $i++) { 
+            for ($j=$i+1; $j<count($nomor); $j++) { 
+                if($nomor[$i] ==$nomor[$j]){
+                    $check=true;
+                }
+            }
+        }
+        if($check){
+            $this->session->set_flashdata('massage','<div class="alert alert-danger text-capitalize" role="alert">NIM/NISN tidak boleh ada yang sama</div>');
+            redirect('Permohonan');
+            return;
+        }else if($yearStart > $yearEnd){
             $this->session->set_flashdata('massage','<div class="alert alert-danger text-capitalize" role="alert">tahun mulai magang tidak boleh lebih besar</div>');
             redirect('Permohonan');
             return;
